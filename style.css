@@ -9,6 +9,26 @@ body {
     text-align: center;
 }
 
-
+#slideshow {
+    position: relative;
+    height: 400px;
+    width: 600px;
+    margin: 0 auto;
+  }
+  
+  #slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  #slideshow img.active {
+    opacity: 1;
+  }
+  
 
 

@@ -231,7 +231,18 @@ body {
   animation: voyage 20s linear infinite;
 }
 
-
+#smoke {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  opacity: 0;
+  animation: smoke 4s ease-in-out infinite;
+}
 
 /*ANIMATIONS*/
 
@@ -338,6 +349,26 @@ body {
   50% { width: 0.5vmin; opacity: 1; }
   100% { width: var(--finalSize); opacity: 0; }
 }
+
+@keyframes smoke {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -40px);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, -70px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -100px);
+  }
+}
+
 
 /* @keyframes fireworkPseudo {
   0% { transform: translate(-50%, -50%); width: var(--initialSize); opacity: 1; }
